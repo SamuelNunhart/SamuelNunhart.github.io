@@ -1,30 +1,49 @@
-# Game Portfolio Site
+# Samuel Nunhart - Games & Interactive Work
 
-This is a static portfolio starter designed for GitHub Pages. It does not need a build system.
+Personal portfolio site for selected games, prototypes, and interactive projects.
+
+Live site: [https://samuelnunhart.github.io/](https://samuelnunhart.github.io/)
+
+## About
+
+This repository contains a static GitHub Pages portfolio. It is meant to show game projects in chronological order, with gameplay videos, playable builds, project notes, skills, contact links, and a downloadable CV.
 
 ## Files
 
-- `index.html` - portfolio content and project cards.
-- `styles.css` - responsive visual design.
-- `script.js` - small enhancement for the footer year.
-- `assets/` - add screenshots, GIFs, trailers, and your CV PDF here.
+- `index.html` - page content, project cards, skills, and contact links.
+- `styles.css` - responsive layout and visual styling.
+- `script.js` - small footer year script.
+- `assets/` - images, GIFs, trailer thumbnails, favicon, and CV PDF.
 
-## Customize
+## Run Locally
 
-1. Replace any remaining placeholder copy in `index.html`.
-2. Replace the intro paragraph with your role, engine experience, and target role.
-3. Add your real CV as `assets/Samuel_Nunhart_CV.pdf` or update the CV link.
-4. Replace project titles, engines, roles, dates, and links.
-5. Replace project media placeholders with real screenshots or GIFs.
-6. Replace contact links.
+From the repository root:
 
-## Publish on GitHub Pages
+```powershell
+py -3 -m http.server 8765 --bind 127.0.0.1
+```
 
-1. Create a GitHub repository named `SamuelNunhart.github.io`.
-2. Upload these files to the repository root.
-3. Go to `Settings` -> `Pages`.
-4. Under `Build and deployment`, choose `Deploy from a branch`.
-5. Choose the `main` branch and `/root`, then save.
-6. Your site will publish at `https://SamuelNunhart.github.io/`.
+Then open:
 
-GitHub says publication can take up to 10 minutes after pushing changes.
+[http://127.0.0.1:8765/](http://127.0.0.1:8765/)
+
+You can also open `index.html` directly in a browser, but the local server better matches how GitHub Pages serves the site.
+
+## Update Content
+
+Edit `index.html` to update:
+
+- project titles, years, engines, roles, descriptions, and links
+- skills
+- email, LinkedIn, itch.io, and other contact links
+- CV link
+
+Add portfolio assets to `assets/`, then reference them from `index.html`.
+
+## Publish
+
+Push changes to the `main` branch. GitHub Pages publishes from the repository root at:
+
+[https://samuelnunhart.github.io/](https://samuelnunhart.github.io/)
+
+GitHub Pages can take a few minutes to rebuild after a push.
