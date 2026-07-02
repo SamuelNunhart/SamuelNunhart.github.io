@@ -78,8 +78,8 @@ a {
   grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.8fr);
   align-items: center;
   gap: clamp(28px, 5vw, 72px);
-  min-height: calc(100vh - 68px);
-  padding: clamp(40px, 7vw, 88px) clamp(18px, 4vw, 56px) clamp(28px, 5vw, 56px);
+  min-height: 560px;
+  padding: clamp(36px, 6vw, 72px) clamp(18px, 4vw, 56px) clamp(28px, 5vw, 48px);
 }
 
 .intro-copy {
@@ -104,10 +104,11 @@ p {
 }
 
 h1 {
-  max-width: 620px;
-  margin-bottom: 20px;
-  font-size: clamp(2.3rem, 5vw, 4.2rem);
-  line-height: 1.05;
+  max-width: 680px;
+  margin-bottom: 16px;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-weight: 680;
+  line-height: 1.28;
   letter-spacing: 0;
 }
 
@@ -179,9 +180,9 @@ h3 {
 }
 
 .featured-shot {
-  min-height: min(58vh, 620px);
+  min-height: 300px;
   border-radius: 8px;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 16 / 10;
 }
 
 .shot-label {
@@ -365,7 +366,7 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(2.1rem, 11vw, 3rem);
+    font-size: clamp(1.35rem, 6vw, 1.8rem);
   }
 
   .featured-shot {
