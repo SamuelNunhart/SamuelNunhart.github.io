@@ -42,7 +42,7 @@ Add portfolio assets to `assets/`, then reference them from `index.html`.
 
 ## Publish
 
-Push changes to the `main` branch. GitHub Pages publishes from the repository root at:
+Push changes to the `main` branch. GitHub Actions publishes the static site to GitHub Pages at:
 
 [https://samuelnunhart.github.io/](https://samuelnunhart.github.io/)
 
