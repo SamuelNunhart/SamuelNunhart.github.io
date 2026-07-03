@@ -61,3 +61,58 @@ if (emailCopyButton) {
     }
   });
 }
+
+const modalOpeners = document.querySelectorAll("[data-open-modal]");
+const modalClosers = document.querySelectorAll("[data-close-modal]");
+let activeModal = null;
+let lastModalTrigger = null;
+
+function closeModal(modal = activeModal) {
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+
+  modal.querySelectorAll("video").forEach((video) => {
+    video.pause();
+  });
+
+  activeModal = null;
+  lastModalTrigger?.focus();
+  lastModalTrigger = null;
+}
+
+function openModal(modal, trigger) {
+  if (!modal) {
+    return;
+  }
+
+  activeModal = modal;
+  lastModalTrigger = trigger;
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+  modal.querySelector(".modal-close")?.focus();
+}
+
+modalOpeners.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal = document.getElementById(button.dataset.openModal);
+    openModal(modal, button);
+  });
+});
+
+modalClosers.forEach((button) => {
+  button.addEventListener("click", () => {
+    closeModal(button.closest(".media-modal"));
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && activeModal) {
+    closeModal();
+  }
+});

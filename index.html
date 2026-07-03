@@ -9,7 +9,7 @@
     >
     <title>Samuel Nunhart | Games &amp; Interactive Work</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=20260703-other-work">
+    <link rel="stylesheet" href="styles.css?v=20260703-arduino-work">
   </head>
   <body>
     <header class="site-header">
@@ -164,9 +164,23 @@
       </section>
 
       <section class="section compact other-work" id="other-work" aria-labelledby="other-work-title">
-        <div class="section-heading">
+        <div class="section-heading other-work-heading">
           <p class="eyebrow">Beyond games</p>
           <h2 id="other-work-title">Other Work</h2>
+          <div class="other-work-feature">
+            <img
+              src="assets/arduino-car.png"
+              alt="Arduino car prototype with wheels, relay board, ultrasonic sensors, and display"
+            >
+            <button
+              class="button secondary media-modal-trigger"
+              type="button"
+              data-open-modal="arduino-video-modal"
+              aria-haspopup="dialog"
+            >
+              View Arduino car videos
+            </button>
+          </div>
         </div>
         <div class="other-work-copy">
           <p>
@@ -178,15 +192,17 @@
             <article class="other-work-item">
               <h3>Arduino cars</h3>
               <p>
-                Built and adjusted small vehicle prototypes, working with movement control, components,
-                wiring, and debugging during testing.
+                Built several small vehicle prototypes, including my own car from scratch. It used two
+                copper circuit boards as the base, an Arduino for control, its own battery, four wheel
+                servos controlled through relays, a display for sensor and decision feedback, and
+                ultrasonic sensors on both ends for navigation.
               </p>
             </article>
             <article class="other-work-item">
               <h3>Electronics projects</h3>
               <p>
-                Worked on smaller electrical builds that involved circuits, inputs, outputs, and making
-                hardware behave reliably.
+                Worked on smaller electrical builds that involved circuits, inputs, outputs, wiring, and
+                making hardware behave reliably when tested in real conditions.
               </p>
             </article>
             <article class="other-work-item">
@@ -304,11 +320,46 @@
       </section>
     </main>
 
+    <div class="media-modal" id="arduino-video-modal" aria-hidden="true">
+      <div class="media-modal-backdrop" data-close-modal></div>
+      <div class="media-modal-panel" role="dialog" aria-modal="true" aria-labelledby="arduino-video-title">
+        <div class="media-modal-header">
+          <div>
+            <p class="eyebrow">Arduino car</p>
+            <h2 id="arduino-video-title">Prototype Videos</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="Close video popup">
+            Close
+          </button>
+        </div>
+        <div class="video-grid">
+          <figure class="video-card">
+            <video controls muted playsinline preload="metadata" poster="assets/arduino-car.png">
+              <source src="assets/arduino-car-navigation.mp4" type="video/mp4">
+            </video>
+            <figcaption>Navigation and sensor testing</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video controls muted playsinline preload="metadata" poster="assets/arduino-car.png">
+              <source src="assets/arduino-car-display.mp4" type="video/mp4">
+            </video>
+            <figcaption>Display and control feedback</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video controls muted playsinline preload="metadata" poster="assets/arduino-car.png">
+              <source src="assets/arduino-car-movement.mp4" type="video/mp4">
+            </video>
+            <figcaption>Movement prototype test</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
     <footer class="site-footer">
       <span>&copy; <span id="year"></span> Samuel Nunhart</span>
       <a href="#top">Back to top</a>
     </footer>
 
-    <script src="script.js?v=20260703-email-slide"></script>
+    <script src="script.js?v=20260703-arduino-modal"></script>
   </body>
 </html>
