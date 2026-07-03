@@ -351,13 +351,15 @@ h3 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 28px;
-  align-items: end;
+  align-items: center;
   background: #e9efe8;
 }
 
 .contact-links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  align-self: center;
   justify-content: flex-end;
   gap: 10px;
 }
