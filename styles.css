@@ -365,6 +365,11 @@ h3 {
   gap: 28px;
   align-items: center;
   background: #e9efe8;
+  transition: padding-bottom 220ms ease;
+}
+
+.contact.email-open {
+  padding-bottom: clamp(140px, 12vw, 176px);
 }
 
 .contact-links {
@@ -378,23 +383,37 @@ h3 {
 
 .contact-actions {
   display: grid;
+  position: relative;
   justify-items: end;
   gap: 10px;
 }
 
 .email-panel {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 2;
+  display: grid;
+  width: min(100vw - 36px, 290px);
+  grid-template-columns: 1fr;
   gap: 10px;
+  justify-items: stretch;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition:
+    opacity 180ms ease,
+    transform 220ms ease;
 }
 
-.email-panel[hidden] {
-  display: none;
+.email-panel.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .email-address {
-  max-width: min(100%, 280px);
+  width: 100%;
   overflow-wrap: anywhere;
 }
 
@@ -441,6 +460,11 @@ h3 {
 
   .contact-actions {
     justify-items: start;
+  }
+
+  .email-panel {
+    right: auto;
+    left: 0;
   }
 
   .contact-links,

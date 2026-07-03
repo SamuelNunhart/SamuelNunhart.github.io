@@ -8,6 +8,7 @@ const emailToggle = document.querySelector(".contact-toggle");
 const emailPanel = document.querySelector("#email-panel");
 const emailCopyButton = document.querySelector("[data-copy-email]");
 const emailStatus = document.querySelector(".email-status");
+const contactSection = emailPanel?.closest(".contact");
 
 async function copyText(value) {
   if (navigator.clipboard?.writeText) {
@@ -29,8 +30,12 @@ async function copyText(value) {
 if (emailToggle && emailPanel) {
   emailToggle.addEventListener("click", () => {
     const isOpen = emailToggle.getAttribute("aria-expanded") === "true";
-    emailToggle.setAttribute("aria-expanded", String(!isOpen));
-    emailPanel.hidden = isOpen;
+    const nextState = !isOpen;
+
+    emailToggle.setAttribute("aria-expanded", String(nextState));
+    emailPanel.classList.toggle("is-open", nextState);
+    emailPanel.setAttribute("aria-hidden", String(!nextState));
+    contactSection?.classList.toggle("email-open", nextState);
   });
 }
 
