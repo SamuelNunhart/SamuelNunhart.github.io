@@ -9,7 +9,7 @@
     >
     <title>Samuel Nunhart | Games &amp; Interactive Work</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=20260703-arduino-work">
+    <link rel="stylesheet" href="styles.css?v=20260703-arduino-layout">
   </head>
   <body>
     <header class="site-header">
@@ -167,22 +167,6 @@
         <div class="section-heading other-work-heading">
           <p class="eyebrow">Beyond games</p>
           <h2 id="other-work-title">Other Work</h2>
-          <div class="other-work-feature">
-            <img
-              src="assets/arduino-car.png"
-              alt="Arduino car prototype with wheels, relay board, ultrasonic sensors, and display"
-            >
-            <button
-              class="button secondary media-modal-trigger"
-              type="button"
-              data-open-modal="arduino-video-modal"
-              aria-haspopup="dialog"
-            >
-              View Arduino car videos
-            </button>
-          </div>
-        </div>
-        <div class="other-work-copy">
           <p>
             Alongside games, I have worked on Arduino cars and smaller electronics projects. These were
             hands-on builds where programming had to connect with wiring, motors, sensors, testing, and
@@ -212,6 +196,22 @@
                 repeated small fixes.
               </p>
             </article>
+          </div>
+        </div>
+        <div class="other-work-copy">
+          <div class="other-work-feature">
+            <img
+              src="assets/arduino-car.png"
+              alt="Arduino car prototype with wheels, relay board, ultrasonic sensors, and display"
+            >
+            <button
+              class="button secondary media-modal-trigger"
+              type="button"
+              data-open-modal="arduino-video-modal"
+              aria-haspopup="dialog"
+            >
+              View prototype footage
+            </button>
           </div>
         </div>
       </section>
@@ -334,19 +334,19 @@
         </div>
         <div class="video-grid">
           <figure class="video-card">
-            <video controls muted playsinline preload="metadata" poster="assets/arduino-car.png">
+            <video controls muted playsinline preload="metadata" poster="assets/arduino-car-navigation-poster.jpg">
               <source src="assets/arduino-car-navigation.mp4" type="video/mp4">
             </video>
             <figcaption>Navigation and sensor testing</figcaption>
           </figure>
           <figure class="video-card">
-            <video controls muted playsinline preload="metadata" poster="assets/arduino-car.png">
+            <video controls muted playsinline preload="metadata" poster="assets/arduino-car-display-poster.jpg">
               <source src="assets/arduino-car-display.mp4" type="video/mp4">
             </video>
-            <figcaption>Display and control feedback</figcaption>
+            <figcaption>Floor movement test</figcaption>
           </figure>
           <figure class="video-card">
-            <video controls muted playsinline preload="metadata" poster="assets/arduino-car.png">
+            <video controls muted playsinline preload="metadata" poster="assets/arduino-car-movement-poster.jpg">
               <source src="assets/arduino-car-movement.mp4" type="video/mp4">
             </video>
             <figcaption>Movement prototype test</figcaption>
@@ -360,6 +360,6 @@
       <a href="#top">Back to top</a>
     </footer>
 
-    <script src="script.js?v=20260703-arduino-modal"></script>
+    <script src="script.js?v=20260703-arduino-layout"></script>
   </body>
 </html>
