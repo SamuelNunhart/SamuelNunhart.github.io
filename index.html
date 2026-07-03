@@ -9,7 +9,7 @@
     >
     <title>Samuel Nunhart | Games &amp; Interactive Work</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=20260703-contact-align">
+    <link rel="stylesheet" href="styles.css?v=20260703-email-panel">
   </head>
   <body>
     <header class="site-header">
@@ -201,10 +201,26 @@
           <p class="eyebrow">Contact</p>
           <h2 id="contact-title">Let us talk about games.</h2>
         </div>
-        <div class="contact-links">
-          <a href="mailto:samuelnunhart147@gmail.com">Email</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">itch.io</a>
+        <div class="contact-actions">
+          <div class="contact-links">
+            <button class="contact-toggle" type="button" aria-expanded="false" aria-controls="email-panel">
+              Email
+            </button>
+            <a href="#">LinkedIn</a>
+            <a href="#">itch.io</a>
+          </div>
+          <div class="email-panel" id="email-panel" hidden>
+            <input
+              class="email-address"
+              type="text"
+              value="samuelnunhart147@gmail.com"
+              aria-label="Email address"
+              data-copy-email
+              readonly
+            >
+            <a href="mailto:samuelnunhart147@gmail.com">Open mail app</a>
+            <span class="email-status" aria-live="polite"></span>
+          </div>
         </div>
       </section>
     </main>
