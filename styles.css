@@ -287,13 +287,35 @@ h3 {
   align-items: start;
 }
 
-.skills-list {
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  gap: 22px;
+}
+
+.skill-group {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-group h3 {
+  margin: 0;
+  color: var(--accent-dark);
+  font-size: 0.9rem;
+  font-weight: 850;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.skill-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.skills-list span {
+.skill-chip {
   display: inline-flex;
   align-items: center;
   min-height: 36px;
@@ -303,6 +325,13 @@ h3 {
   background: #fff;
   color: var(--ink);
   font-weight: 720;
+}
+
+.skill-chip.primary {
+  border-color: rgba(196, 63, 47, 0.45);
+  background: #fff1eb;
+  color: var(--accent-dark);
+  box-shadow: inset 0 0 0 1px rgba(196, 63, 47, 0.12);
 }
 
 .contact {
