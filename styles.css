@@ -289,8 +289,8 @@ h3 {
 
 .skill-groups {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .skill-group {
@@ -300,11 +300,12 @@ h3 {
   gap: 12px;
 }
 
-.skill-group h3 {
+#skills .skill-group h3 {
   margin: 0;
   color: var(--accent-dark);
-  font-size: 0.9rem;
-  font-weight: 850;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -315,7 +316,7 @@ h3 {
   gap: 10px;
 }
 
-.skill-chip {
+#skills .skill-chip {
   display: inline-flex;
   align-items: center;
   min-height: 36px;
@@ -325,9 +326,10 @@ h3 {
   background: #fff;
   color: var(--ink);
   font-weight: 720;
+  line-height: 1.15;
 }
 
-.skill-chip.primary {
+#skills .skill-chip.primary {
   border-color: rgba(196, 63, 47, 0.45);
   background: #fff1eb;
   color: var(--accent-dark);
@@ -375,6 +377,10 @@ h3 {
   }
 
   .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-groups {
     grid-template-columns: 1fr;
   }
 
