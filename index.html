@@ -9,7 +9,7 @@
     >
     <title>Samuel Nunhart | Games &amp; Interactive Work</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=20260703-arduino-layout">
+    <link rel="stylesheet" href="styles.css?v=20260723-playable-games">
   </head>
   <body>
     <header class="site-header">
@@ -46,7 +46,7 @@
           <h2 id="games-title">Games</h2>
           <p>
             Projects are listed from earliest to most recent, so the progression is easy to follow.
-            Each card shows the project, what it demonstrates, and where more info or a playable build can go.
+            Each card opens a closer project view and includes a playable download where one is ready to share.
           </p>
         </div>
 
@@ -67,8 +67,10 @@
                 <li>Handled coordinate selection and basic win/loss conditions.</li>
               </ul>
               <div class="project-links">
-                <a href="#" aria-label="Read info about Minesweeper">Info</a>
-                <a href="#" aria-label="Play Minesweeper">Playable build</a>
+                <button type="button" data-open-modal="minesweeper-info-modal" aria-haspopup="dialog">
+                  View info
+                </button>
+                <a href="downloads/minesweeper-windows.zip" download>Download build</a>
               </div>
             </div>
           </article>
@@ -89,8 +91,10 @@
                 <li>Balanced UI information with a compact play area.</li>
               </ul>
               <div class="project-links">
-                <a href="#" aria-label="Read info about Ellen">Info</a>
-                <a href="#" aria-label="Play Ellen">Playable build</a>
+                <button type="button" data-open-modal="ellen-info-modal" aria-haspopup="dialog">
+                  View info
+                </button>
+                <a href="downloads/project-ellen-windows.zip" download>Download build</a>
               </div>
             </div>
           </article>
@@ -111,8 +115,10 @@
                 <li>Built a clean visual board for reading positions quickly.</li>
               </ul>
               <div class="project-links">
-                <a href="#" aria-label="Read info about Chess Game">Info</a>
-                <a href="#" aria-label="Play Chess Game">Playable build</a>
+                <button type="button" data-open-modal="chess-info-modal" aria-haspopup="dialog">
+                  View info
+                </button>
+                <a href="downloads/chess-windows.zip" download>Download build</a>
               </div>
             </div>
           </article>
@@ -133,8 +139,10 @@
                 <li>Worked with lighting, composition, and gameplay readability.</li>
               </ul>
               <div class="project-links">
-                <a href="#" aria-label="Read info about The Old Place">Info</a>
-                <a href="#" aria-label="Play The Old Place">Playable build</a>
+                <button type="button" data-open-modal="old-place-info-modal" aria-haspopup="dialog">
+                  View info
+                </button>
+                <span class="project-unavailable">Build available separately</span>
               </div>
             </div>
           </article>
@@ -155,8 +163,10 @@
                 <li>Prototyped a readable strategic overview for future gameplay systems.</li>
               </ul>
               <div class="project-links">
-                <a href="#" aria-label="Read info about Tactics">Info</a>
-                <a href="#" aria-label="Play Tactics">Playable build</a>
+                <button type="button" data-open-modal="tactics-info-modal" aria-haspopup="dialog">
+                  View info
+                </button>
+                <span class="project-unavailable">Prototype in progress</span>
               </div>
             </div>
           </article>
@@ -320,6 +330,184 @@
       </section>
     </main>
 
+    <div class="media-modal project-info-modal" id="minesweeper-info-modal" aria-hidden="true">
+      <div class="media-modal-backdrop" data-close-modal></div>
+      <div class="media-modal-panel" role="dialog" aria-modal="true" aria-labelledby="minesweeper-info-title">
+        <div class="media-modal-header">
+          <div>
+            <p class="eyebrow">First game / Console</p>
+            <h2 id="minesweeper-info-title">Minesweeper</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="Close Minesweeper info">
+            Close
+          </button>
+        </div>
+        <div class="project-detail">
+          <div class="project-detail-media contain">
+            <img src="assets/minesweeper.png" alt="Console Minesweeper game with a text-based grid">
+          </div>
+          <div class="project-detail-copy">
+            <p>
+              A console Minesweeper project built around grid state, coordinate input, mine placement, and clear
+              text feedback.
+            </p>
+            <h3>What it shows</h3>
+            <ul>
+              <li>Board generation and hidden/revealed cell state.</li>
+              <li>Console UI prompts for selecting and confirming positions.</li>
+              <li>Basic win and loss flow with remaining-mine tracking.</li>
+            </ul>
+            <div class="project-links modal-actions">
+              <a href="downloads/minesweeper-windows.zip" download>Download Windows build</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="media-modal project-info-modal" id="ellen-info-modal" aria-hidden="true">
+      <div class="media-modal-backdrop" data-close-modal></div>
+      <div class="media-modal-panel" role="dialog" aria-modal="true" aria-labelledby="ellen-info-title">
+        <div class="media-modal-header">
+          <div>
+            <p class="eyebrow">Tile-based project / Tiled</p>
+            <h2 id="ellen-info-title">Ellen</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="Close Ellen info">
+            Close
+          </button>
+        </div>
+        <div class="project-detail">
+          <div class="project-detail-media">
+            <img src="assets/ellen.png" alt="Top-down tile-based project Ellen with a sci-fi map and UI">
+          </div>
+          <div class="project-detail-copy">
+            <p>
+              A tile-based adventure project centered on exploration, item use, readable controls, and moment-to-moment
+              player feedback.
+            </p>
+            <h3>What it shows</h3>
+            <ul>
+              <li>Tile-map layout work and spatial puzzle flow.</li>
+              <li>Inventory actions including pickup, drop, cycling, and item use.</li>
+              <li>On-screen player status, keybinds, and interaction messaging.</li>
+            </ul>
+            <div class="project-links modal-actions">
+              <a href="downloads/project-ellen-windows.zip" download>Download Windows build</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="media-modal project-info-modal" id="chess-info-modal" aria-hidden="true">
+      <div class="media-modal-backdrop" data-close-modal></div>
+      <div class="media-modal-panel" role="dialog" aria-modal="true" aria-labelledby="chess-info-title">
+        <div class="media-modal-header">
+          <div>
+            <p class="eyebrow">Board game project</p>
+            <h2 id="chess-info-title">Chess Game</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="Close Chess Game info">
+            Close
+          </button>
+        </div>
+        <div class="project-detail">
+          <div class="project-detail-media contain">
+            <img src="assets/chess-game.png" alt="Chess game board in the starting position">
+          </div>
+          <div class="project-detail-copy">
+            <p>
+              A chess project focused on board representation, rule-driven interaction, and a browser-playable local
+              server package.
+            </p>
+            <h3>What it shows</h3>
+            <ul>
+              <li>Piece setup, turn handling, and chess-board readability.</li>
+              <li>Game logic connected to a visual board interface.</li>
+              <li>A packaged local server that opens the playable chess page.</li>
+            </ul>
+            <div class="project-links modal-actions">
+              <a href="downloads/chess-windows.zip" download>Download Windows build</a>
+            </div>
+            <p class="build-note">
+              The build includes its own Java runtime. Open the included README after extracting the zip.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="media-modal project-info-modal" id="old-place-info-modal" aria-hidden="true">
+      <div class="media-modal-backdrop" data-close-modal></div>
+      <div class="media-modal-panel" role="dialog" aria-modal="true" aria-labelledby="old-place-info-title">
+        <div class="media-modal-header">
+          <div>
+            <p class="eyebrow">3D atmosphere / Exploration</p>
+            <h2 id="old-place-info-title">The Old Place</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="Close The Old Place info">
+            Close
+          </button>
+        </div>
+        <div class="project-detail">
+          <div class="project-detail-media">
+            <img src="assets/the-old-place.png" alt="Dark horror scene from The Old Place with a figure in tall grass">
+          </div>
+          <div class="project-detail-copy">
+            <p>
+              A 3D atmospheric exploration project built around low visibility, environmental tension, and readable
+              scene composition.
+            </p>
+            <h3>What it shows</h3>
+            <ul>
+              <li>Fog, darkness, lighting, and sightline control for mood.</li>
+              <li>Environmental layout designed around exploration and uncertainty.</li>
+              <li>Scene composition with a focus on player readability inside a dark space.</li>
+            </ul>
+            <p class="build-note">
+              Playable desktop build available separately because the current export is a larger package.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="media-modal project-info-modal" id="tactics-info-modal" aria-hidden="true">
+      <div class="media-modal-backdrop" data-close-modal></div>
+      <div class="media-modal-panel" role="dialog" aria-modal="true" aria-labelledby="tactics-info-title">
+        <div class="media-modal-header">
+          <div>
+            <p class="eyebrow">Work in progress / Strategy</p>
+            <h2 id="tactics-info-title">Tactics</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="Close Tactics info">
+            Close
+          </button>
+        </div>
+        <div class="project-detail">
+          <div class="project-detail-media">
+            <img src="assets/tactics.png" alt="Work-in-progress strategy game map with generated territories">
+          </div>
+          <div class="project-detail-copy">
+            <p>
+              A work-in-progress strategy prototype exploring procedural maps, country borders, terrain variety, and
+              future tactical systems.
+            </p>
+            <h3>What it shows</h3>
+            <ul>
+              <li>Seeded map generation with configurable size, shape, and country count.</li>
+              <li>Generated terrain, rivers, territories, and early country placement.</li>
+              <li>A prototype interface for quickly testing generation settings.</li>
+            </ul>
+            <p class="build-note">
+              Prototype build is not shared yet while the core gameplay systems are still being developed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="media-modal" id="arduino-video-modal" aria-hidden="true">
       <div class="media-modal-backdrop" data-close-modal></div>
       <div class="media-modal-panel" role="dialog" aria-modal="true" aria-labelledby="arduino-video-title">
@@ -360,6 +548,6 @@
       <a href="#top">Back to top</a>
     </footer>
 
-    <script src="script.js?v=20260703-arduino-layout"></script>
+    <script src="script.js?v=20260723-playable-games"></script>
   </body>
 </html>

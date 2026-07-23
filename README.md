@@ -6,14 +6,15 @@ Live site: [https://samuelnunhart.github.io/](https://samuelnunhart.github.io/)
 
 ## About
 
-This repository contains a static GitHub Pages portfolio. It is meant to show game projects in chronological order, with gameplay videos, playable builds, project notes, skills, contact links, and a downloadable CV.
+This repository contains a static GitHub Pages portfolio. It is meant to show game projects in chronological order, with screenshots, playable downloads where available, project notes, skills, contact links, and a downloadable CV.
 
 ## Files
 
 - `index.html` - page content, project cards, skills, and contact links.
 - `styles.css` - responsive layout and visual styling.
-- `script.js` - small footer year script.
-- `assets/` - images, GIFs, trailer thumbnails, favicon, and CV PDF.
+- `script.js` - footer year, contact email panel, and project modal behavior.
+- `assets/` - images, video clips, posters, favicon, and CV PDF.
+- `downloads/` - zipped playable builds linked from the games section.
 
 ## Run Locally
 
@@ -34,6 +35,7 @@ You can also open `index.html` directly in a browser, but the local server bette
 Edit `index.html` to update:
 
 - project titles, years, engines, roles, descriptions, and links
+- downloadable game builds in `downloads/`
 - skills
 - email, LinkedIn, itch.io, and other contact links
 - CV link

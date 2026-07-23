@@ -277,6 +277,8 @@ h3 {
 }
 
 .project-links a,
+.project-links button,
+.project-unavailable,
 .contact-links a,
 .contact-links button,
 .email-panel a,
@@ -298,6 +300,8 @@ h3 {
 
 .project-links a:hover,
 .project-links a:focus-visible,
+.project-links button:hover,
+.project-links button:focus-visible,
 .contact-links a:hover,
 .contact-links a:focus-visible,
 .contact-links button:hover,
@@ -308,6 +312,12 @@ h3 {
 .email-panel input:focus-visible {
   border-color: var(--accent);
   color: var(--accent-dark);
+}
+
+.project-unavailable {
+  cursor: default;
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .compact.other-work {
@@ -566,6 +576,64 @@ h3 {
   line-height: 1.05;
 }
 
+.project-info-modal .media-modal-panel {
+  width: min(100%, 1040px);
+}
+
+.project-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.8fr);
+  gap: clamp(18px, 3vw, 30px);
+  align-items: start;
+}
+
+.project-detail-media {
+  overflow: hidden;
+  border: 1px solid rgba(30, 37, 40, 0.14);
+  border-radius: 8px;
+  background: #101417;
+}
+
+.project-detail-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.project-detail-media.contain img {
+  object-fit: contain;
+  background: #f4efe9;
+}
+
+.project-detail-copy {
+  display: grid;
+  gap: 14px;
+}
+
+.project-detail-copy p,
+.build-note {
+  margin: 0;
+  color: var(--muted);
+}
+
+.project-detail-copy h3 {
+  margin: 4px 0 -4px;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.project-detail-copy ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.modal-actions {
+  margin-top: 2px;
+}
+
 .modal-close {
   display: inline-flex;
   align-items: center;
@@ -661,6 +729,10 @@ h3 {
   }
 
   .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail {
     grid-template-columns: 1fr;
   }
 
