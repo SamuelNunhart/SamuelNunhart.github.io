@@ -67,18 +67,22 @@ const modalClosers = document.querySelectorAll("[data-close-modal]");
 let activeModal = null;
 let lastModalTrigger = null;
 
+function hideModal(modal) {
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+
+  modal.querySelectorAll("video").forEach((video) => {
+    video.pause();
+  });
+}
+
 function closeModal(modal = activeModal) {
   if (!modal) {
     return;
   }
 
-  modal.classList.remove("is-open");
-  modal.setAttribute("aria-hidden", "true");
+  hideModal(modal);
   document.body.classList.remove("modal-open");
-
-  modal.querySelectorAll("video").forEach((video) => {
-    video.pause();
-  });
 
   activeModal = null;
   lastModalTrigger?.focus();
@@ -88,6 +92,10 @@ function closeModal(modal = activeModal) {
 function openModal(modal, trigger) {
   if (!modal) {
     return;
+  }
+
+  if (activeModal && activeModal !== modal) {
+    hideModal(activeModal);
   }
 
   activeModal = modal;

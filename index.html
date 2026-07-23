@@ -9,7 +9,7 @@
     >
     <title>Samuel Nunhart | Games &amp; Interactive Work</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=20260723-playable-games">
+    <link rel="stylesheet" href="styles.css?v=20260723-play-choice">
   </head>
   <body>
     <header class="site-header">
@@ -70,7 +70,9 @@
                 <button type="button" data-open-modal="minesweeper-info-modal" aria-haspopup="dialog">
                   View info
                 </button>
-                <a href="downloads/minesweeper-windows.zip" download>Download build</a>
+                <button type="button" data-open-modal="minesweeper-play-modal" aria-haspopup="dialog">
+                  Play
+                </button>
               </div>
             </div>
           </article>
@@ -94,7 +96,9 @@
                 <button type="button" data-open-modal="ellen-info-modal" aria-haspopup="dialog">
                   View info
                 </button>
-                <a href="downloads/project-ellen-windows.zip" download>Download build</a>
+                <button type="button" data-open-modal="ellen-play-modal" aria-haspopup="dialog">
+                  Play
+                </button>
               </div>
             </div>
           </article>
@@ -118,7 +122,9 @@
                 <button type="button" data-open-modal="chess-info-modal" aria-haspopup="dialog">
                   View info
                 </button>
-                <a href="downloads/chess-windows.zip" download>Download build</a>
+                <button type="button" data-open-modal="chess-play-modal" aria-haspopup="dialog">
+                  Play
+                </button>
               </div>
             </div>
           </article>
@@ -330,6 +336,81 @@
       </section>
     </main>
 
+    <div class="media-modal play-choice-modal" id="minesweeper-play-modal" aria-hidden="true">
+      <div class="media-modal-backdrop" data-close-modal></div>
+      <div class="media-modal-panel" role="dialog" aria-modal="true" aria-labelledby="minesweeper-play-title">
+        <div class="media-modal-header">
+          <div>
+            <p class="eyebrow">Build options</p>
+            <h2 id="minesweeper-play-title">Play Minesweeper</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="Close Minesweeper play options">
+            Close
+          </button>
+        </div>
+        <div class="play-options" aria-label="Minesweeper play options">
+          <a class="play-choice" href="downloads/minesweeper-windows.zip" download>
+            Download Windows build
+            <span>ZIP file hosted on this portfolio.</span>
+          </a>
+          <span class="play-choice unavailable">
+            Go through itch.io
+            <span>Coming soon once the itch.io page is published.</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="media-modal play-choice-modal" id="ellen-play-modal" aria-hidden="true">
+      <div class="media-modal-backdrop" data-close-modal></div>
+      <div class="media-modal-panel" role="dialog" aria-modal="true" aria-labelledby="ellen-play-title">
+        <div class="media-modal-header">
+          <div>
+            <p class="eyebrow">Build options</p>
+            <h2 id="ellen-play-title">Play Ellen</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="Close Ellen play options">
+            Close
+          </button>
+        </div>
+        <div class="play-options" aria-label="Ellen play options">
+          <a class="play-choice" href="downloads/project-ellen-windows.zip" download>
+            Download Windows build
+            <span>ZIP file hosted on this portfolio.</span>
+          </a>
+          <span class="play-choice unavailable">
+            Go through itch.io
+            <span>Coming soon once the itch.io page is published.</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="media-modal play-choice-modal" id="chess-play-modal" aria-hidden="true">
+      <div class="media-modal-backdrop" data-close-modal></div>
+      <div class="media-modal-panel" role="dialog" aria-modal="true" aria-labelledby="chess-play-title">
+        <div class="media-modal-header">
+          <div>
+            <p class="eyebrow">Build options</p>
+            <h2 id="chess-play-title">Play Chess Game</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="Close Chess Game play options">
+            Close
+          </button>
+        </div>
+        <div class="play-options" aria-label="Chess Game play options">
+          <a class="play-choice" href="downloads/chess-windows.zip" download>
+            Download Windows build
+            <span>ZIP file hosted on this portfolio.</span>
+          </a>
+          <span class="play-choice unavailable">
+            Go through itch.io
+            <span>Coming soon once the itch.io page is published.</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
     <div class="media-modal project-info-modal" id="minesweeper-info-modal" aria-hidden="true">
       <div class="media-modal-backdrop" data-close-modal></div>
       <div class="media-modal-panel" role="dialog" aria-modal="true" aria-labelledby="minesweeper-info-title">
@@ -358,7 +439,9 @@
               <li>Basic win and loss flow with remaining-mine tracking.</li>
             </ul>
             <div class="project-links modal-actions">
-              <a href="downloads/minesweeper-windows.zip" download>Download Windows build</a>
+              <button type="button" data-open-modal="minesweeper-play-modal" aria-haspopup="dialog">
+                Play
+              </button>
             </div>
           </div>
         </div>
@@ -393,7 +476,9 @@
               <li>On-screen player status, keybinds, and interaction messaging.</li>
             </ul>
             <div class="project-links modal-actions">
-              <a href="downloads/project-ellen-windows.zip" download>Download Windows build</a>
+              <button type="button" data-open-modal="ellen-play-modal" aria-haspopup="dialog">
+                Play
+              </button>
             </div>
           </div>
         </div>
@@ -428,7 +513,9 @@
               <li>A packaged local server that opens the playable chess page.</li>
             </ul>
             <div class="project-links modal-actions">
-              <a href="downloads/chess-windows.zip" download>Download Windows build</a>
+              <button type="button" data-open-modal="chess-play-modal" aria-haspopup="dialog">
+                Play
+              </button>
             </div>
             <p class="build-note">
               The build includes its own Java runtime. Open the included README after extracting the zip.
@@ -548,6 +635,6 @@
       <a href="#top">Back to top</a>
     </footer>
 
-    <script src="script.js?v=20260723-playable-games"></script>
+    <script src="script.js?v=20260723-play-choice"></script>
   </body>
 </html>

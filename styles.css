@@ -580,6 +580,44 @@ h3 {
   width: min(100%, 1040px);
 }
 
+.play-choice-modal .media-modal-panel {
+  width: min(100%, 560px);
+}
+
+.play-options {
+  display: grid;
+  gap: 12px;
+}
+
+.play-choice {
+  display: grid;
+  gap: 5px;
+  padding: 13px 14px;
+  border: 1px solid rgba(30, 37, 40, 0.18);
+  border-radius: 8px;
+  background: #fff;
+  color: inherit;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.play-choice span {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.play-choice:hover,
+.play-choice:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+.play-choice.unavailable {
+  color: var(--muted);
+  cursor: default;
+}
+
 .project-detail {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.8fr);
