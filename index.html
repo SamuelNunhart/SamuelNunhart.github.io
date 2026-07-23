@@ -9,7 +9,7 @@
     >
     <title>Samuel Nunhart | Games &amp; Interactive Work</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=20260723-play-choice">
+    <link rel="stylesheet" href="styles.css?v=20260723-confirm-download">
   </head>
   <body>
     <header class="site-header">
@@ -349,11 +349,35 @@
           </button>
         </div>
         <div class="play-options" aria-label="Minesweeper play options">
-          <a class="play-choice" href="downloads/minesweeper-windows.zip" download>
-            Download Windows build
-            <span>ZIP file hosted on this portfolio.</span>
-          </a>
-          <span class="play-choice unavailable">
+          <div class="download-option">
+            <button
+              class="play-choice download-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="minesweeper-download-details"
+              data-toggle-download
+            >
+              Download Windows build
+              <span>ZIP file hosted on this portfolio.</span>
+            </button>
+            <div class="download-details" id="minesweeper-download-details" aria-hidden="true">
+              <dl class="download-meta">
+                <div>
+                  <dt>Size</dt>
+                  <dd>0.09 MB</dd>
+                </div>
+                <div>
+                  <dt>Platform</dt>
+                  <dd>Windows</dd>
+                </div>
+              </dl>
+              <p>Extract the ZIP first, then run the Minesweeper executable.</p>
+              <a class="confirm-download" href="downloads/minesweeper-windows.zip" download>
+                Confirm download
+              </a>
+            </div>
+          </div>
+          <span class="play-choice itch-choice unavailable">
             Go through itch.io
             <span>Coming soon once the itch.io page is published.</span>
           </span>
@@ -374,11 +398,35 @@
           </button>
         </div>
         <div class="play-options" aria-label="Ellen play options">
-          <a class="play-choice" href="downloads/project-ellen-windows.zip" download>
-            Download Windows build
-            <span>ZIP file hosted on this portfolio.</span>
-          </a>
-          <span class="play-choice unavailable">
+          <div class="download-option">
+            <button
+              class="play-choice download-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="ellen-download-details"
+              data-toggle-download
+            >
+              Download Windows build
+              <span>ZIP file hosted on this portfolio.</span>
+            </button>
+            <div class="download-details" id="ellen-download-details" aria-hidden="true">
+              <dl class="download-meta">
+                <div>
+                  <dt>Size</dt>
+                  <dd>65.54 MB</dd>
+                </div>
+                <div>
+                  <dt>Platform</dt>
+                  <dd>Windows</dd>
+                </div>
+              </dl>
+              <p>Extract the ZIP first. The package includes the app files and runtime it needs to launch.</p>
+              <a class="confirm-download" href="downloads/project-ellen-windows.zip" download>
+                Confirm download
+              </a>
+            </div>
+          </div>
+          <span class="play-choice itch-choice unavailable">
             Go through itch.io
             <span>Coming soon once the itch.io page is published.</span>
           </span>
@@ -399,11 +447,35 @@
           </button>
         </div>
         <div class="play-options" aria-label="Chess Game play options">
-          <a class="play-choice" href="downloads/chess-windows.zip" download>
-            Download Windows build
-            <span>ZIP file hosted on this portfolio.</span>
-          </a>
-          <span class="play-choice unavailable">
+          <div class="download-option">
+            <button
+              class="play-choice download-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="chess-download-details"
+              data-toggle-download
+            >
+              Download Windows build
+              <span>ZIP file hosted on this portfolio.</span>
+            </button>
+            <div class="download-details" id="chess-download-details" aria-hidden="true">
+              <dl class="download-meta">
+                <div>
+                  <dt>Size</dt>
+                  <dd>97.16 MB</dd>
+                </div>
+                <div>
+                  <dt>Platform</dt>
+                  <dd>Windows</dd>
+                </div>
+              </dl>
+              <p>Extract the ZIP first, then follow the included README to open the local chess page.</p>
+              <a class="confirm-download" href="downloads/chess-windows.zip" download>
+                Confirm download
+              </a>
+            </div>
+          </div>
+          <span class="play-choice itch-choice unavailable">
             Go through itch.io
             <span>Coming soon once the itch.io page is published.</span>
           </span>
@@ -635,6 +707,6 @@
       <a href="#top">Back to top</a>
     </footer>
 
-    <script src="script.js?v=20260723-play-choice"></script>
+    <script src="script.js?v=20260723-confirm-download"></script>
   </body>
 </html>

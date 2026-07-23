@@ -64,12 +64,30 @@ if (emailCopyButton) {
 
 const modalOpeners = document.querySelectorAll("[data-open-modal]");
 const modalClosers = document.querySelectorAll("[data-close-modal]");
+const downloadToggles = document.querySelectorAll("[data-toggle-download]");
 let activeModal = null;
 let lastModalTrigger = null;
+
+function setDownloadDetails(button, isOpen) {
+  const detailsId = button.getAttribute("aria-controls");
+  const details = detailsId ? document.getElementById(detailsId) : null;
+  const option = button.closest(".download-option");
+
+  button.setAttribute("aria-expanded", String(isOpen));
+  details?.setAttribute("aria-hidden", String(!isOpen));
+  option?.classList.toggle("is-open", isOpen);
+}
+
+function resetDownloadDetails(modal) {
+  modal.querySelectorAll("[data-toggle-download]").forEach((button) => {
+    setDownloadDetails(button, false);
+  });
+}
 
 function hideModal(modal) {
   modal.classList.remove("is-open");
   modal.setAttribute("aria-hidden", "true");
+  resetDownloadDetails(modal);
 
   modal.querySelectorAll("video").forEach((video) => {
     video.pause();
@@ -116,6 +134,21 @@ modalOpeners.forEach((button) => {
 modalClosers.forEach((button) => {
   button.addEventListener("click", () => {
     closeModal(button.closest(".media-modal"));
+  });
+});
+
+downloadToggles.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal = button.closest(".media-modal");
+    const nextState = button.getAttribute("aria-expanded") !== "true";
+
+    modal?.querySelectorAll("[data-toggle-download]").forEach((toggle) => {
+      if (toggle !== button) {
+        setDownloadDetails(toggle, false);
+      }
+    });
+
+    setDownloadDetails(button, nextState);
   });
 });
 
